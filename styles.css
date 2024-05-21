@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color, #f0f8ff);
+  color: var(--text-color, #333);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  background: var(--container-bg-color, white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 1000px; /* Increased max-width */
+  transition: background-color 0.3s;
+  margin: 0 20px; /* Added margin for small screens */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.settings {
+  display: flex;
+  align-items: center;
+}
+
+#languageSelect, #themeToggle {
+  margin-left: 10px;
+}
+
+.task-input {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#taskInput, #categorySelect, #dateInput {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  flex: 1;
+}
+
+#addTaskButton {
+  padding: 10px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-list-container {
+  margin-top: 20px;
+}
+
+.task-list-container h2 {
+  color: var(--text-color, #666);
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-list li {
+  padding: 10px;
+  background: var(--task-bg-color, #f9f9f9);
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.task-list li .task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list li .task-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.task-list li .task-actions button {
+  background: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.task-list li .task-actions button.edit {
+  background: #ffc107;
+}
+
+.task-list li .task-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.task-list li .subtasks {
+  margin-top: 10px;
+}
+
+.subtask-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subtask-list li {
+  display: flex;
+  align-items: center;
+}
+
+.subtask-list li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --container-bg-color: #1e1e1e;
+  --task-bg-color: #333;
+}
